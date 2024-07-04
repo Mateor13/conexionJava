@@ -24,8 +24,10 @@ public class form1 {
                     Statement statement = connection.createStatement();
                     ResultSet resultSet = statement.executeQuery(query);
                     while (resultSet.next()){
-                        Nombre.setText(resultSet.getString("nombre"));
-                        }
+                        Nombre.setText(resultSet.getString("nombre")+resultSet.getString("bimestreUno")+resultSet.getString("bimestreDos"));
+
+                    }
+
                 }
                 catch (SQLException e1){
                     System.out.println("El error es: "+ e1.getMessage());
