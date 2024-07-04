@@ -24,7 +24,7 @@ public class form1 {
                     Statement statement = connection.createStatement();
                     ResultSet resultSet = statement.executeQuery(query);
                     while (resultSet.next()){
-                        Nombre.setText(resultSet.getString("nombre")+resultSet.getString("bimestreUno")+resultSet.getString("bimestreDos"));
+                        Nombre.setText(resultSet.getString("nombre")+" "+resultSet.getString("bimestreUno")+" "+resultSet.getString("bimestreDos"));
 
                     }
 
